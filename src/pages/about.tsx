@@ -1,3 +1,5 @@
+import { GetServerSideProps } from "next";
+
 export default function About() {
   return (
     <>
@@ -6,4 +8,12 @@ export default function About() {
       </div>
     </>
   );
+}
+
+export async function getServerSideProps(
+  context: GetServerSideProps
+) {
+  return {
+    props: {}, // will be passed to the page component as props
+  };
 }
